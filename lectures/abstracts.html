@@ -1,0 +1,133 @@
+<HTML>
+<HEAD>
+
+<TITLE>Paper Abstracts</TITLE>
+
+</HEAD>
+
+<BODY bgcolor = #ffffff>
+
+<H1>Paper Abstracts</H1>
+
+<PRE>
+
+<hr> 
+Neural Stereo (Rafael)
+
+- RomniStereo: Recurrent Omnidirectional Stereo Matching [Helvipad]
+
+Omnidirectional stereo matching (OSM) is an essential and reliable
+means for 360◦ depth sensing. However, prior methods rely on a
+3D encoder-decoder to regularize the cost volume.
+Recently, the Recurrent All-pairs Field Transforms (RAFT)
+approach employs has efficiently improved image-matching tasks,
+i.e., optical flow, and stereo matching.
+To bridge the gap between OSM and RAFT, we propose an adaptive
+weighting scheme to transform the outputs of spherical sweeping
+of OSM into the inputs for the recurrent update, thus creating a
+recurrent omnidirectional stereo matching (RomniStereo) algorithm.
+
+<hr>
+Neural Splat (Daniel / Davi)
+
+- Splatter-360: Generalizable 360 Gaussian Splatting for Wide-baseline PERF
+
+Wide-baseline panoramic images are frequently used in
+applications like VR and simulations. However, synthesizing
+novel views from these panoramic images in real time
+remains a significant challenge.
+Although existing 3D Gaussian splatting (3DGS) methods can
+produce photo-realistic views under narrow baselines, they
+often overfit the training views when dealing with wide-
+baseline panoramic images due to the difficulty in learning
+precise geometry from sparse 360◦ views. This paper presents
+Splatter-360, a novel end-to-end generalizable 3DGS framework
+designed to handle wide-baseline panoramic images. 
+Splatter-360 performs multi-view matching directly in the spherical
+domain by constructing a spherical cost volume through a
+spherical sweep algorithm, enhancing the network’s depth
+perception and geometry estimation. 
+
+- 3DGUT: Enabling Distorted Cameras and Secondary Rays in Gaussian Splatting
+
+3D Gaussian Splatting (3DGS) enables efficient reconstruction.
+However, due to its rasterization based formulation, 3DGS is
+constrained to ideal pinhole cameras and lacks support for secondary
+lighting effects. Recent methods address these limitations by tracing
+the particles instead, at the cost of significantly slower rendering.
+In this work, we propose 3D Gaussian Unscented Transform (3DGUT),
+replacing the EWA splatting formulation with the Unscented Transform
+that approximates the particles through sigma points, which can be
+projected exactly under any nonlinear projection function.
+This modification enables trivial support of distorted cameras
+with time dependent effects such as rolling shutter, while
+retaining the efficiency of rasterization. Additionally, our
+rendering formulation enables secondary ray tracing required
+to represent phenomena such as reflections and refraction within
+the same 3D representation
+
+<hr>
+Neural CNNs (Leo)
+
+- DarSwin-Unet: Distortion Aware Encoder-Decoder Architecture
+
+Wide-angle fisheye images are becoming increasingly
+common for perception tasks in applications such as robotics,
+security, and mobility (e.g. drones, avionics). However, cur-
+rent models often either ignore the distortions in wide-angle
+images or are not suitable to perform pixel-level tasks.
+In this paper, we present an encoder-decoder model based on a
+radial transformer architecture that adapts to distortions in
+wide-angle lenses by leveraging the physical characteristics
+defined by the radial distortion profile. We introduce a U-Net
+architecture, DarSwin-Unet, designed for pixel level tasks.
+We demonstrate its performance on depth estimation and show
+that DarSwin-Unet can perform zero-shot adaptation to un-
+seen distortions of different wide-angle lenses.
+
+<hr>
+Neural Interiors (Bruno)
+
+- Pano2Room: Novel View Synthesis from a Single Indoor Panorama
+
+Recent single-view 3D generative methods have made significant
+advancements by leveraging knowledge distilled from extensive 3D
+object datasets. However, challenges persist in the synthesis of 3D
+scenes from a single view. In this paper, we introduce a novel approach
+Pano2Room, designed to automatically reconstruct high-quality 3D
+indoor scenes from a single panoramic image. These panoramic images
+can be easily generated using a panoramic RGBD inpainter from captures
+at a single location with any camera. The key idea is to initially
+construct a preliminary mesh from the input panorama, and iteratively
+refine this mesh using a panoramic RGBD inpainter while collecting
+photo-realistic 3D-consistent pseudo novel views. Finally, the refined
+mesh is converted into a 3D Gaussian Splatting field and trained with
+the collected pseudo novel views.
+ 
+<hr>
+Neural Diffusion (Enylton)
+
+- Matrix-3D: Omnidirectional Explorable 3D World Generationg
+
+Explorable 3D world generation from a single image or text prompt forms
+a cornerstone of spatial intelligence. Recent works utilize video to achieve
+wide-scope and generalizable 3D world generation. However, existing approaches
+often suffer from a limited scope in the generated scenes. Here, we propose
+Matrix-3D, a framework that utilize panoramic representation for wide-coverage
+omnidirectional explorable 3D world generation that combines conditional video
+generation and panoramic 3D reconstruction. We first train a trajectory-guided
+panoramic video diffusion model that employs scene mesh renders as condition, to
+enable high-quality and geometrically consistent scene video generation. To lift
+the panorama scene video to 3D world, we propose two separate methods: (1) a
+feed-forward large panorama reconstruction model for rapid 3D scene reconstruction
+and (2) an optimization-based pipeline for accurate and detailed 3D scene
+reconstruction.
+
+<hr>
+</PRE>
+
+<b>Copyright &copy;
+Luiz Velho
+</b>
+</BODY>
+</HTML>
